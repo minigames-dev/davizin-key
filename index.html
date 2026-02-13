@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key do Dia</title>
+    <style>
+        body{
+            background:#0f0f0f;
+            color:white;
+            font-family:Arial;
+            text-align:center;
+            padding-top:100px;
+        }
+        .box{
+            background:#1e1e1e;
+            padding:30px;
+            border-radius:10px;
+            display:inline-block;
+        }
+        .key{
+            font-size:28px;
+            color:#00ff88;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>🔥 KEY DO DIA 🔥</h1>
+    <div class="key" id="key"></div>
+</div>
+
+<script>
+function gerarKeyDoDia(){
+    let hoje = new Date();
+    let dia = hoje.getDate();
+    let mes = hoje.getMonth() + 1;
+    let ano = hoje.getFullYear();
+
+    let segredo = 3047;
+
+    let resultado = (dia * mes) + segredo + ano;
+
+    return "FREE_" + resultado;
+}
+
+document.getElementById("key").innerText = gerarKeyDoDia();
+</script>
+
+</body>
+</html>
